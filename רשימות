@@ -1,0 +1,44 @@
+
+//כיתבו שתי פעולות שמחזירות:
+//1. רשימה עם 20 מספרים אקראיים בתחום נתון x,y
+//2. כמה פעמים מופיע מספר נתון x ברשימה נתונה h
+
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+
+public class reshima {
+
+	public static void main(String[] args) {
+		int x=10;
+		int y=50;
+		List<Integer>RandomList=list(x,y);
+		System.out.println(RandomList);
+	}
+	
+	public static List<Integer>list(int x, int y){
+		List<Integer>RandomList=new ArrayList<>() ;
+		Random random =new Random();
+		for(int i=0;i<20;i++) {
+			RandomList.add(random.nextInt(y-x+1)+x);
+		}
+		return RandomList;
+	}
+
+
+
+
+   public static int in(int x, List <Integer>h){
+	   int count=0;
+	   for(int i=0;i<h.size();i++) {
+		   if(h.get(i)==x) {
+			   count++;
+		   }
+	   }
+	   return count;
+   }
+   }
+
